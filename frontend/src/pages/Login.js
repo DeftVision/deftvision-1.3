@@ -1,7 +1,7 @@
 import { Box, TextField, Button, Typography, Stack} from '@mui/material'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {useAuth} from "../utility/AuthContext";
+import { useAuth } from "../utility/AuthContext";
 
 const form_fields = {
     email: '',
@@ -30,7 +30,7 @@ export default function Login() {
 
             if(response.ok && _response.token) {
                 login(_response.token);
-                navigate('/dashboard')
+                navigate('/')
             } else {
                 setError(_response.message || 'Login Failed Miserably')
             }
@@ -42,10 +42,10 @@ export default function Login() {
     }
 
     return (
-        <Box component='form'>
+        <Box component='form' sx={{justifyContent: 'center', width: '50%', margin: 'auto'}}>
 
             <Stack direction='column' spacing={2}>
-                <Typography variant='overline' sx={{fontSize: '1rem'}}>login</Typography>
+                <Typography variant='overline' sx={{fontSize: '1rem', alignSelf: 'center'}}>login</Typography>
 
                 <TextField
                     type='email'

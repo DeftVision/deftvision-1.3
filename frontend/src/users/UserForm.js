@@ -52,7 +52,8 @@ export default function UserForm() {
     return (
         <Box width='100%' sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: 4}}>
             <Paper elevation={16} width='100%' sx={{padding: 5, maxWidth: '1200px', width: '90%'}}>
-                <Box component='form' onSubmit={handleSubmit} sx={{width: '75%', justifyContent: 'center'}}>
+                <Box component='form' onSubmit={handleSubmit} sx={{width: '50%', justifyContent: 'center', margin: 'auto'}}>
+                    <Typography variant='overline' sx={{fontSize: '1rem', alignSelf: 'center', justifyContent: 'center', marginBottom: 3}}>add user</Typography>
                     <Stack direction='column' spacing={2}>
                         <TextField
                             type='text'
@@ -165,8 +166,8 @@ export default function UserForm() {
                             label='is active'
                         />
                     </Stack>
-                    <Stack direction='row' spacing={2} sx={{justifyContent: 'center', alignItems: 'center'}}>
-                        <Button variant='outlined'>cancel</Button>
+                    <Stack direction='row' spacing={2} sx={{justifyContent: 'center', alignItems: 'center', marginTop: 4}}>
+                        <Button variant='outlined' color='error'>cancel</Button>
                         <Button variant='outlined' type='submit'>save</Button>
                     </Stack>
                 </Box>
